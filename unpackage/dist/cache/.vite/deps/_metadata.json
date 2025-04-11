@@ -1,31 +1,8 @@
 {
-  "hash": "8d31ef8b",
-  "configHash": "aa314fd8",
-  "lockfileHash": "99a49a1d",
-  "browserHash": "570c2313",
-  "optimized": {
-    "qrcodejs": {
-      "src": "../../../../../node_modules/qrcodejs/index.js",
-      "file": "qrcodejs.js",
-      "fileHash": "08b0b210",
-      "needsInterop": true
-    },
-    "qrcode": {
-      "src": "../../../../../node_modules/qrcode/lib/browser.js",
-      "file": "qrcode.js",
-      "fileHash": "4a882a6a",
-      "needsInterop": true
-    },
-    "uqrcodejs": {
-      "src": "../../../../../node_modules/uqrcodejs/uqrcode.js",
-      "file": "uqrcodejs.js",
-      "fileHash": "f85f28c9",
-      "needsInterop": true
-    }
-  },
-  "chunks": {
-    "chunk-Y2F7D3TJ": {
-      "file": "chunk-Y2F7D3TJ.js"
-    }
-  }
+  "hash": "7a1f8b2e",
+  "configHash": "db4281dc",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "a63235cd",
+  "optimized": {},
+  "chunks": {}
 }

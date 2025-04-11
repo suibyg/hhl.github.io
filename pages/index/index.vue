@@ -1,48 +1,52 @@
 <template>
-  <view class="qrcode-container">
-    <image :src="qrCodeUrl" mode="aspectFit" style="width: 200px; height: 200px;"></image>
-    <button @click="generateQrCode">重新生成二维码</button>
-  </view>
+	<view class="content">
+		<image class="logo" src="/static/logo.png"></image>
+		<view class="text-area">
+			<text class="title">{{title}}</text>
+		</view>
+	</view>
 </template>
 
 <script>
-import QRCode from 'qrcode';
+	export default {
+		data() {
+			return {
+				title: 'Hello'
+			}
+		},
+		onLoad() {
 
-export default {
-  data() {
-    return {
-      qrCodeUrl: '' // 用于存储生成的二维码图片路径
-    };
-  },
-  mounted() {
-    this.generateQrCode();
-  },
-  methods: {
-    async generateQrCode() {
-     try {
-       // 生成二维码的 Base64 编码字符串
-       const url = await QRCode.toDataURL('http://localhost:5173/#/', {
-         width: 200,
-         height: 200,
-         color: {
-           dark: '#000000', // 模块颜色
-           light: '#ffffff' // 背景颜色
-         }
-       });
-       this.qrCodeUrl = url;
-     } catch (error) {
-       console.error('Failed to create QR code:', error);
-     }
-   }
-  }
-};
+		},
+		methods: {
+
+		}
+	}
 </script>
 
 <style>
-.qrcode-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50rpx;
-}
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo {
+		height: 200rpx;
+		width: 200rpx;
+		margin-top: 200rpx;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50rpx;
+	}
+
+	.text-area {
+		display: flex;
+		justify-content: center;
+	}
+
+	.title {
+		font-size: 36rpx;
+		color: #8f8f94;
+	}
 </style>
